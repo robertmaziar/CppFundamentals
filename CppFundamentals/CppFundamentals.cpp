@@ -168,6 +168,25 @@ int main()
 	//pJohn->SetNumber(456);
 	//std::cout << "John: " << John.GetName() << " " << John.GetNumber() << std::endl;
 
+	//// Memory Management Examples (The Free Store)
+	//{
+	//	Resource localResource("local");
+	//	std::string localString = localResource.GetName();
+	//}
+	//Resource* pResource = new Resource("created with new");
+	//std::string newString = pResource->GetName();
+	//int j = 3;
+	//delete pResource;
+
+	//// Throws an exception because pResource is being called after deletion
+	//std::string string3 = pResource->GetName();
+
+	// Memory Management Examples (Manual Memory Management)
+	Person Rob("Rob", "Maziar", 123);
+	Rob.AddResource();
+	std::string s1 = Rob.GetResourceName();
+	Rob.AddResource();
+
 	return 0;
 }
 

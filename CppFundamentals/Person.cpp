@@ -3,25 +3,20 @@
 using std::cout;
 using std::endl;
 
-
-Person::Person() : arbitrarynumber(0)
+Person::Person(std::string first, std::string last, int arbitrary) 
+	: firstname(first), lastname(last), arbitrarynumber(arbitrary)
 {
-	cout << "constructing " << GetName() << endl;
-}
-
-Person::~Person()
-{
-	cout << "destructing " << GetName() << endl;
-}
-
-Person::Person(std::string first, std::string last, int arbitrary) : firstname(first), lastname(last), arbitrarynumber(arbitrary)
-{
-	cout << "constructing " << GetName() << endl;
 }
 
 std::string Person::GetName() const
 {
 	return firstname + " " + lastname;
+}
+
+void Person::AddResource()
+{
+	pResource.reset();
+	pResource = std::make_shared<Resource>("Resource for " + GetName());
 }
 
 bool Person::operator<(Person const& p) const
