@@ -8,6 +8,10 @@ Person::Person(std::string first, std::string last, int arbitrary)
 {
 }
 
+Person::~Person()
+{
+}
+
 std::string Person::GetName() const
 {
 	return firstname + " " + lastname;

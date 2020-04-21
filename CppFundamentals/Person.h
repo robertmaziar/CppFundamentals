@@ -6,7 +6,8 @@ class Person
 {
 public:
 	Person(std::string first, std::string last, int arbitrary);
-	std::string GetName() const;
+	virtual ~Person();
+	virtual std::string GetName() const;
 	int GetNumber() const 
 	{ 
 		return arbitrarynumber; 

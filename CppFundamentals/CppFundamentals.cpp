@@ -181,11 +181,21 @@ int main()
 	//// Throws an exception because pResource is being called after deletion
 	//std::string string3 = pResource->GetName();
 
-	// Memory Management Examples (Manual Memory Management)
-	Person Rob("Rob", "Maziar", 123);
-	Rob.AddResource();
-	std::string s1 = Rob.GetResourceName();
-	Rob.AddResource();
+	//// Memory Management Examples (Manual Memory Management)
+	//Person Rob("Rob", "Maziar", 123);
+	//Rob.AddResource();
+	//std::string s1 = Rob.GetResourceName();
+	//Rob.AddResource();
+
+	//// Indirection and Inheritance Example
+	//Person Rob("Rob", "Maziar", 123);
+	//Person& rRob = Rob;
+	//Person* pRob = &Rob;
+
+	//Tweeter RobMaziar("Rob", "Maziar", 456, "@rmaziar");
+	//Person* pRobMaziar = &RobMaziar;
+	//Person& rpRobMaziar = RobMaziar;
+	//Tweeter& rRobMaziar = RobMaziar;
 
 	return 0;
 }
